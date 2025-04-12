@@ -24,7 +24,7 @@ const images = [
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const imagesPerView = images.length * 1000 / window.innerWidth; // Number of images to show at once
+  const imagesPerView = images.length * 600 / window.innerWidth; // Number of images to show at once
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -70,9 +70,6 @@ export default function Home() {
         <button className={styles.nextButton} onClick={handleNext}>
           &#10095;
         </button>
-      </div>
-      <div className={styles.subHeading}>
-      <h2>All Categories</h2>
       </div>
     </main>
   );
