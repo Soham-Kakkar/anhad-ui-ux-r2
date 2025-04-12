@@ -7,7 +7,7 @@ interface Info {
   images: string[];
   title: string;
   info: string;
-  prices: Map<string, number>;
+  prices: Map<string, string>;
 }
 
 export default function BuyComponent({ images, title, info, prices }: Info) {

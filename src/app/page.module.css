@@ -1,25 +1,37 @@
-/* Hero Section */
-.hero {
+.heading {
   text-align: center;
-  margin: 20px 0;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 3rem;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.heading h1 {
+  margin-bottom: 2rem;
 }
 
-.hero h2 {
-  font-size: 1.5rem;
+.subHeading h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.heading * {
+  max-width: 40rem;
+}
+
+.heading h2 {
   color: #08BDBD;
 }
 
-/* Carousel */
 .carousel {
   position: relative;
   width: 100%;
-  height: 400px;
   overflow: hidden;
+  margin: 3rem auto;
 }
 
 .carouselInner {
@@ -28,8 +40,9 @@
 }
 
 .carouselItem {
-  height: 100%;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .prevButton,
@@ -41,8 +54,8 @@
   color: white;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   z-index: 10;
 }
@@ -60,45 +73,15 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Featured Gates Section */
-.featured {
-  margin: 40px 20px;
-  text-align: center;
-}
-
-.featured h2 {
-  margin-bottom: 20px;
-}
-
-.featuredGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.featuredItem {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-}
-
-/* Categories Section */
 .categories {
-  margin: 40px 20px;
-  text-align: center;
-}
-
-.categories h2 {
-  margin-bottom: 20px;
-}
-
-.categoriesGrid {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 20px;
+  margin: 20px 0;
 }
-
-.categoryItem {
-  text-align: center;
+.categories img {
+  width: 20rem;
+  height: 20rem;
+  cursor: pointer;
 }

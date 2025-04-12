@@ -1,0 +1,242 @@
+.cardContainer {
+  border: 2px solid grey;
+  border-radius: 0.7em;
+  max-width: 30vw;
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 0.5em;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  margin: 1em;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0.5em;
+}
+
+.categoryBtn {
+  border-radius: 1em;
+  border: gray;
+  font-size: 0.52em;
+  margin: 0.7em;
+  margin-top: 0;
+  margin-left: 0;
+  transition: all 0.5s;
+}
+
+.categoryBtn:hover {
+  background-color: rgba(170, 213, 118, 0.3);
+}
+
+.infoContainer {
+  padding: 1rem;
+}
+
+.infoContainer p {
+  color: gray;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.thumbnailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.mainImage {
+  width: 400px;
+  height: 450px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.priceContainer {
+  margin-bottom: 20px;
+}
+
+.priceLabel {
+  color: #666;
+  font-weight: bold;
+}
+
+.priceValue {
+  font-size: larger;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.sizeContainer {
+  margin-bottom: 20px;
+}
+
+.sizeLabel {
+  color: #666;
+  font-weight: bold;
+}
+
+.sizeButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sizeButton {
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 12px;
+}
+
+.sizeButtonSelected {
+  border-color: #aad576;
+  background-color: #d4edda;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.actionButton {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 10rem;
+  border-radius: 2rem;
+}
+
+.addToCartButton {
+  background-color: #28a745;
+}
+
+.customizeButton {
+  background-color: #007bff;
+}
+.addToCartButton:hover {
+  background-color: #218838;
+}
+button:active {
+  transform: translateY(2px);
+}
+.addToCartButton:active {
+  background-color: #1e7e34;
+}
+
+.customizeButton:hover {
+  background-color: #0056b3;
+}
+
+.customizeButton:active {
+  background-color: #0047b3;
+}
+
+.customOrderContainer {
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+  height: 5rem;
+  background-color: #eaf7e4;
+  border: 1px solid #aad576;
+  border-radius: 10px;
+}
+
+.customOrderContent {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.customOrderImage {
+  width: auto;
+  height: 7rem;
+  position: relative;
+}
+
+.customOrderText {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.customOrderInputContainer {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.customOrderInput {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+}
+
+.customOrderButton {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.customOrderButton:hover {
+  background-color: #218838;
+}
+
+
+.customOrderIcon {
+  width: 20px;
+  height: 20px;
+}
