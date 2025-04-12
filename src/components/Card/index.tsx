@@ -15,15 +15,15 @@ export default function Card(props: CardProps) {
     <div className={styles.cardContainer}>
       <div className={styles.cardBox}>
         <div className={styles.imageContainer}>
-          <Link href={`/buy/${formattedName}`}>
+          <a href={`/buy/${formattedName}`}>
             <img src={props.image} alt="Card Image" className={styles.image} />
-          </Link>
+          </a>
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.nameContainer}>
-            <Link href={`/buy/${formattedName}`}>
+            <a href={`/buy/${formattedName}`}>
               <h3>{props.name}</h3>
-            </Link>
+            </a>
           </div>
           <p className={styles.priceValue}>
               ${selectedSize ? props.prices.get(selectedSize) : "Select a size"}

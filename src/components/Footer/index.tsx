@@ -55,9 +55,9 @@ support@laornamental.com</a>
             <div>
               <h3>All Categories</h3>
               <ul>
-                <li><a href="#">Gates</a></li>
-                <li><a href="#">Fences</a></li>
-                <li><a href="#">Railings</a></li>
+                <li><a href="/#featured-gates">Gates</a></li>
+                <li><a href="/#featured-fences">Fences</a></li>
+                <li><a href="#/featured-railings">Railings</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Customization</a></li>
                 <li><a href="#">Special Order</a></li>
@@ -159,15 +159,36 @@ support@laornamental.com</a>
           .footer-top {
             flex-direction: column;
             align-items: center;
+            text-align: center;
+          }
+
+          .footer-logo {
+            border-right: none;
+            margin-bottom: 20px;
           }
 
           .footer-links {
             flex-direction: column;
             align-items: center;
+            gap: 30px;
           }
 
           .footer-links > div {
             margin-bottom: 20px;
+          }
+
+          .footer-links h3 {
+            font-size: 14px;
+            border-bottom: 1px solid #fff;
+          }
+
+          .footer-links ul li {
+            margin-bottom: 10px;
+          }
+
+          .footer-bottom {
+            font-size: 12px;
+            margin-top: 30px;
           }
         }
       `}</style>

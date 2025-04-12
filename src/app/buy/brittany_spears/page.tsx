@@ -3,7 +3,7 @@ import BuyComponent from "@/components/Buy";
 export default function Page() {
   const productInfo = {
     images: [
-      "/products/f1.png",
+      "/products/f1.jpg",
       "/products/g3_2.png",
       "/products/g3_3.png",
       "/products/g3_4.png",

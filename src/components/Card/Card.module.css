@@ -240,3 +240,20 @@ button:active {
   width: 20px;
   height: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    max-width: 90vw;
+  }
+  .imageContainer {
+    margin: 0.5em;
+  }
+  .nameContainer {
+    margin-right: 0.2em;
+  }
+  .categoryBtn {
+    font-size: 0.4em;
+    margin: 0.3em;
+  }
+  
+}

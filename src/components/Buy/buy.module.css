@@ -192,3 +192,14 @@ button:active {
   width: 20px;
   height: 20px;
 }
+
+@media (max-width: 900px) {
+  .thumbnailContainer {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

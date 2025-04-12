@@ -93,3 +93,43 @@
   width: 32px;
   height: 32px;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .navbarBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .menuItem {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Ensure the menu is visible when active */
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff; /* Add background for visibility */
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}

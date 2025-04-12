@@ -35,7 +35,7 @@ const images = [
 export default function Home() {
 
   return (
-    <main style={{scrollBehavior:'smooth'}}>
+    <main>
       <div className={styles.heading}>
         <h1>Designed to Impress, Built to Protect.</h1>
         <h2>Handcrafted Decorative Gates That Transform Your Entry into a Work of Art.</h2>
@@ -45,7 +45,12 @@ export default function Home() {
       slidesPerView={5}
         spaceBetween={30}
         navigation={true}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
       >
+        
         {images.map((src, index) => (
             <SwiperSlide
             key={index}
