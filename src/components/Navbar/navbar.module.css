@@ -1,0 +1,95 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbarTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.logoImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 20px 0 100px;
+  position: relative;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cartIcon,
+.profileIcon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbarBottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #AAD576;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.menuItem:hover {
+  color: #69b60b;
+}
+.menuItem:hover * {
+  fill: #69b60b;
+}
+
+.menuIcon {
+  width: 32px;
+  height: 32px;
+}

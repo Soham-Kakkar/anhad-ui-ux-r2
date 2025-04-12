@@ -1,95 +1,79 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+const images = [
+  "/products/g1_1.png",
+  "/products/g1_2.png",
+  "/products/g1_3.png",
+  "/products/g1_4.png",
+  "/products/g1_5.png",
+  "/products/g2_1.png",
+  "/products/g2_2.png",
+  "/products/g2_3.png",
+  "/products/g2_4.png",
+  "/products/g2_5.png",
+  "/products/g3_1.png",
+  "/products/g3_2.png",
+  "/products/g3_3.png",
+  "/products/g3_4.png",
+  "/products/g3_5.png",
+];
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const imagesPerView = images.length * 1000 / window.innerWidth; // Number of images to show at once
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0
+        ? Math.ceil(images.length / imagesPerView) - 1
+        : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      (prevIndex + 1) % Math.ceil(images.length / imagesPerView)
+    );
+  };
+
+  return (
+    <main>
+      <div className={styles.heading}>
+        <h1>Designed to Impress, Built to Protect.</h1>
+        <h2>Handcrafted Decorative Gates That Transform Your Entry into a Work of Art.</h2>
+      </div>
+      <div className={styles.carousel}>
+        <div
+          className={styles.carouselInner}
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            width: `${(images.length / imagesPerView) * 100}%`,
+          }}
+        >
+          {images.map((src, index) => (
+            <div
+              className={styles.carouselItem}
+              key={index}
+              style={{ flex: `0 0 ${100 / imagesPerView}%` }}
+            >
+              <Image src={src} alt={`Gate ${index + 1}`} width={300} height={300} />
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <button className={styles.prevButton} onClick={handlePrev}>
+          &#10094;
+        </button>
+        <button className={styles.nextButton} onClick={handleNext}>
+          &#10095;
+        </button>
+      </div>
+      <div className={styles.subHeading}>
+      <h2>All Categories</h2>
+      </div>
+    </main>
   );
 }
